@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ofertas especiales en trajes de baño - 50% de descuento y envío express gratis">
+  <meta name="keywords" content="trajes de baño, ofertas verano, descuento natación, moda playa">
+  <title>Ofertas de Verano - 50% Descuento | Exclusive</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media_queries.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Banner Promotions -->
+  <div id="banner-container"></div>
+  <!-- Header  -->
+  <div id="header-navbar"></div>
+  <!-- Separador Visual -->
+  <hr class="nav-border" aria-hidden="true">
+
+  <!-- Banner Promotions -->
+  <script>
+    fetch('/banner/index.html')
+      .then(response => response.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const banner = doc.querySelector('section');
+        if (banner) {
+          banner.classList.add('fade-in-down'); // 👈 Add animation
+          document.getElementById('banner-container').appendChild(banner);
+        }
+      })
+      .catch(err => console.error('Error al cargar el banner:', err));
+  </script>
+
+  <!-- Header -->
+  <script>
+    fetch('/header/index.html')
+      .then(response => response.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const header = doc.querySelector('header');
+        if (header) {
+          header.classList.add('fade-in-left-header'); // 👈 Add animation
+          document.getElementById('header-navbar').appendChild(header);
+        }
+      })
+      .catch(err => console.error('Error al cargar el header:', err));
+  </script>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
+
+<!-- .hero-section
+    <section class="hero-section">
+      <div class="hero-one">
+        <div class="hero-item">
+          <span>Woman's Fashion</span>
+          <i class="bx bx-chevron-right"></i>
+        </div>
+      </div>
+    </section> -->

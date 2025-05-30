@@ -1,0 +1,29 @@
+/* Responsive */
+@media (max-width: 768px) {
+  .promo-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-items {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ul-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .nav-text input {
+    width: 150px;
+  }
+}
