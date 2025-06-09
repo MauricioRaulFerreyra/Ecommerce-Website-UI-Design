@@ -26,6 +26,7 @@ ul {
 }
 
 a {
+  color: var(--black-c);
   text-decoration: none;
 }
 
@@ -65,80 +66,11 @@ button {
   border: 0;
 }
 
-/* Banner de promoción */
-.promo-banner {
-  background-color: var(--black-c);
-  width: 100%;
-  min-height: 55px;
-  padding: 0.75rem 0.5rem;
+.nav-border {
+  margin-top: 0.5rem;
+  animation: fadeInLeftHeader 1s ease-out both;
 }
 
-.promo-content {
-  max-width: 1300px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.promo-message {
-  gap: 0.5rem;
-  flex: 1;
-}
-
-.promo-message p {
-  font-size: 16px;
-  color: var(--white-c);
-  font-weight: 300;
-  margin-right: 0.5rem;
-}
-
-.promo-message .shop-now {
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: underline;
-  color: var(--white-c);
-  white-space: nowrap;
-}
-
-.language-selector {
-  gap: 0.25rem;
-  color: var(--white-c);
-  padding: 0.5rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.language-selector:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.language-selector span {
-  font-size: 17px;
-  font-weight: 300;
-}
-
-.language-selector i {
-  font-size: 20px;
-}
-
-/* Animación fadeInDown */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Clase que aplicaremos al cargar */
-.fade-in-down {
-  animation: fadeInDown 0.8s ease-out both;
-}
-
-/* Animación fadeInDownHeader */
 @keyframes fadeInLeftHeader {
   0% {
     opacity: 0;
@@ -151,108 +83,6 @@ button {
   }
 }
 
-/* Clase que aplicaremos al cargar */
 .fade-in-left-header {
   animation: fadeInLeftHeader 1.2s ease-out both;
-}
-
-/* Header */
-.header {
-  padding: 2rem 0;
-  border-bottom: 1px solid #00000020;
-}
-
-.navbar {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.nav-items {
-  flex: 1;
-}
-
-.logo h1 a {
-  color: var(--black-c);
-  font-size: 30px;
-  font-weight: 600;
-}
-
-.ul-items {
-  gap: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.ul-items li:first-child a {
-  text-decoration: underline;
-}
-
-.ul-items li a {
-  font-size: 18px;
-  color: var(--black-c);
-  transition: color 0.2s ease;
-}
-
-.ul-items li a:hover {
-  color: var(--orange-c);
-}
-
-.nav-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.nav-text {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  padding: 0.5rem;
-}
-
-.nav-text input {
-  border: none;
-  background: transparent;
-  width: 200px;
-  height: 2rem;
-  font-size: 14px;
-  padding: 0 0.5rem;
-  outline: none;
-}
-
-.nav-text input::placeholder {
-  color: #666;
-}
-
-.nav-text button {
-  padding: 0.25rem;
-  border-radius: 2px;
-}
-
-.nav-text button i {
-  font-size: 20px;
-  color: var(--black-c);
-}
-
-.item-save {
-  display: flex;
-  gap: 1rem;
-}
-
-.item-save button {
-  padding: 0.5rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.item-save button:hover {
-  background-color: #f0f0f0;
-}
-
-.item-save button i {
-  font-size: 24px;
-  color: var(--black-c);
 }

@@ -1,0 +1,97 @@
+/* Banner de promoción - Estilos principales */
+
+.promo-banner {
+  background-color: var(--black-c);
+  width: 100dvw;
+  min-height: 55px;
+  animation: fadeInDown 0.8s ease-out both;
+}
+
+.promo-content {
+  margin: 0 0 0 23rem;
+  width: 60%;
+}
+
+.promo-message {
+  width: 631px;
+  gap: 1px;
+}
+
+.promo-message p {
+  width: 547px;
+  height: 18px;
+  font-size: 16px;
+  color: var(--white-c);
+  font-weight: 300;
+}
+
+.promo-message .shop-now {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  align-items: center;
+  height: 18px;
+  text-decoration: underline;
+  color: var(--white-c);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.promo-message .shop-now:hover,
+.promo-message .shop-now:focus {
+  opacity: 0.9;
+  outline: none;
+}
+
+
+/* Selector de idioma - Estilos mejorados */
+.language-selector {
+  position: relative;
+  /* Para el dropdown */
+  gap: 5px;
+  color: var(--white-c);
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.language-selector:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language-selector h2 {
+  font-size: 17px;
+  font-weight: 300;
+  margin: 0;
+  /* Reset */
+}
+
+.language-selector i {
+  margin-left: 0.2rem;
+  font-size: 24px;
+  transition: transform 0.2s ease;
+}
+
+.language-selector[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+
+
+/* Animaciones */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.8s ease-out both;
+}

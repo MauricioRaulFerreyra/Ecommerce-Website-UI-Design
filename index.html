@@ -1,70 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ofertas especiales en trajes de baño - 50% de descuento y envío express gratis">
-  <meta name="keywords" content="trajes de baño, ofertas verano, descuento natación, moda playa">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Ofertas especiales en productos electrónicos y ropa - 50% de descuento y envío express gratis">
+  <meta name="keywords" content="productos electrónicos, ofertas verano, descuentos, moda de hoy">
   <title>Ofertas de Verano - 50% Descuento | Exclusive</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/media_queries.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Preload de recursos críticos -->
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" as="style">
+  <link rel="preload" href="/utils/index.js" as="script">
+  <link rel="preload" href="/section_2/section_2.js" as="script">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/banner/banner.css">
+  <link rel="stylesheet" href="/header/header.css">
+  <link rel="stylesheet" href="/hero/hero.css">
+  <link rel="stylesheet" href="/section_2/section_2.css">
+  <link rel="stylesheet" href="/categories/categories.css">
+  <link rel="stylesheet" href="/css/media_queries.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Meta tags para redes sociales -->
+  <meta property="og:title" content="Ofertas de Verano - 50% Descuento | Exclusive">
+  <meta property="og:description"
+    content="Ofertas especiales en productos electrónicos y ropa - 50% de descuento y envío express gratis">
+  <meta property="og:type" content="website">
 </head>
 
 <body>
-  <!-- Banner Promotions -->
-  <div id="banner-container"></div>
-  <!-- Header  -->
-  <div id="header-navbar"></div>
+
+  <!-- Banner superior -->
+  <div id="banner-container" class="promo-banner flex-c-c" aria-live="polite"></div>
+
+  <!-- Header -->
+  <header id="header-container" aria-label="Cabecera principal"></header>
+
   <!-- Separador Visual -->
   <hr class="nav-border" aria-hidden="true">
 
-  <!-- Banner Promotions -->
-  <script>
-    fetch('/banner/index.html')
-      .then(response => response.text())
-      .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const banner = doc.querySelector('section');
-        if (banner) {
-          banner.classList.add('fade-in-down'); // 👈 Add animation
-          document.getElementById('banner-container').appendChild(banner);
-        }
-      })
-      .catch(err => console.error('Error al cargar el banner:', err));
-  </script>
+  <!-- Hero Section -->
+  <section id="hero-container" aria-live="polite" aria-label="Productos destacados">
+    <div class="hero-loading">
+      <span class="sr-only">Cargando contenido destacado...</span>
+      <div class="loading-spinner" aria-hidden="true"></div>
+    </div>
+  </section>
 
-  <!-- Header -->
-  <script>
-    fetch('/header/index.html')
-      .then(response => response.text())
-      .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const header = doc.querySelector('header');
-        if (header) {
-          header.classList.add('fade-in-left-header'); // 👈 Add animation
-          document.getElementById('header-navbar').appendChild(header);
-        }
-      })
-      .catch(err => console.error('Error al cargar el header:', err));
-  </script>
+  <!--  Section 2 -->
+  <div id="section_2" aria-label="Productos Varios" aria-live="polite"></div>
 
-  <script src="index.js"></script>
+  <!-- Categories Section -->
+  <div id="categories" aria-label="Categories Section" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer id="footer-container" aria-label="Pie de página"></footer>
+
+  <!-- Scripts -->
+  <script src="/utils/index.js" defer></script>
+  <script src="/section_2/section_2.js" defer></script>
 </body>
 
 </html>
-
-<!-- .hero-section
-    <section class="hero-section">
-      <div class="hero-one">
-        <div class="hero-item">
-          <span>Woman's Fashion</span>
-          <i class="bx bx-chevron-right"></i>
-        </div>
-      </div>
-    </section> -->
